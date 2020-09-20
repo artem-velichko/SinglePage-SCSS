@@ -1,0 +1,270 @@
+@mixin container($width, $margin-right, $margin-left, $padding-right, $padding-left) {
+	max-width: $width;
+	margin-right: $margin-right;
+	margin-left: $margin-left;
+	padding-right: $padding-right;
+	padding-left: $padding-left;
+}
+
+@mixin font($font-size, $font-style, $font-weight, $color) {
+	font-size: $font-size;
+	font-style: $font-style;
+	font-weight: $font-weight; 
+	color: $color;
+}
+
+@mixin button {
+	display: inline-block;
+	vertical-align: top;
+	height: 50px;
+	padding: 14px 40px;
+	font-size: 13px;
+	font-style: normal;
+	font-weight: bold;
+	line-height: 1.66;
+	text-transform: uppercase;
+	letter-spacing: 0.07em;
+	color: $color-main-two;
+	background-color: $bg-color-button;
+	border: 0px;
+	cursor: pointer;
+}
+
+@mixin links($font-family, $font-size, $color-link, $margin-left) {
+	font-family: $font-family-3;
+	font-size: $font-size;
+	color: $color-link;
+	margin-left: $margin-left;
+}
+
+$color-logo: (
+	light: $color-main-three,
+	dark: $color-main-one
+);
+
+* {
+	box-sizing: border-box;
+	margin: 0px;
+}
+
+body {
+	font-family: $font-family;
+	background-color: $color-body;
+}
+
+.header {
+	position: relative;
+	height: 100vh;
+	background-image: url('../img/m-h-day.jpg');
+	display: block;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	z-index: 1;
+	border-radius: 0 0 40% 0;
+	background-position-x: center;
+	background-position-y: center;
+	.header-wrap {
+		@include container(1170px, auto, auto, 15px, 15px);
+		display: flex;
+		flex-direction: column;
+		> div:last-child {
+			display: flex;
+			align-items: center;
+		}
+	}
+	.header_heading {
+		position: relative;
+	    z-index: 5;
+	    max-width: 500px;
+	    font-family: "Source Sans Pro", sans-serif;
+	    font-size: 62px;
+	    font-style: normal;
+	    font-weight: bold;
+	    color: $color-main-one;
+	    padding-top: 60px;
+	    &:before {
+		position: absolute;
+	    bottom: 0;
+	    left: 0;
+	    z-index: -1;
+	    content: '';
+	    display: inline-block;
+	    width: 260px;
+	    height: 52px;
+	    background: $bg-word;
+	}
+	}
+
+	.header_text {
+		max-width: 540px;
+		line-height: 1.7;
+		padding-top: 60px;
+		padding-bottom: 60px;
+		font-size: 17px;
+		color: $color-main-one;
+	}
+	.header_button {
+		@include button;
+	}
+
+	.login {
+		@include links($font-family, 18px, $color-main-two, 150px);
+	}
+}
+
+.landing-logo {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	padding-top: 20px;
+	font-family: $font-family-2;
+	img {
+		padding-right: 10px;
+	}
+	p {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		color: map-get($color-logo, dark);
+		font-size: 24px;
+		font-weight: bold;
+		letter-spacing: 2px;
+		text-transform: uppercase;
+	}
+	span {
+		font-size: $font-body;
+		text-transform: lowercase;
+		letter-spacing: normal;
+	}
+}
+
+.section_text {
+	@include container(900px, auto, auto, 15px, 15px);
+	@include font(52px, normal, bold, $color-main-one);
+	position: relative;
+	z-index: 5;
+	max-width: 565px;
+	margin-top: 40px;
+	margin-bottom: 40px;
+	text-align: center;
+	&:before {
+	position: absolute;
+    z-index: -1;
+    bottom: 5px;
+    right: 32px;
+    content: '';
+    display: inline-block;
+    width: 241px;
+    height: 50px;
+    background-color: $bg-word;
+}
+}
+
+.section_card_wrap {
+	@include container(900px, auto, auto, 15px, 15px);
+	.section_card {
+		display: flex;
+		flex-direction: row;
+		margin-bottom: 30px;
+		padding: 15px;
+		background-color: $color-main-four;
+		.section_card_img {
+			width: 40%;
+			min-height: 300px;
+		}
+		.section_card_right_container {
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+			padding: 40px;
+			width: 60%;
+			color: $color-main-one;
+			.section_card_heading {
+				@include font(32px, normal, bold, $color-main-two);
+				text-align: center;
+			}
+			.section_link {
+				@include links($font-family, 14px, $color-main-three, 0px);
+				text-align: center;
+			}
+		}
+	}
+}
+
+.section_card_text {
+		font-size: $font-body;
+		font-style: normal;
+		font-weight: normal;
+		color: $color-main-three;
+		line-height: 2;
+}
+
+.section_banner {
+	@include container(1170px, auto, auto, 80px, 80px);
+	position: relative;
+	top: 90px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding-bottom: 50px;
+	padding-top: 50px;
+	border-radius: 5px;
+	background-image: $bg-linear-gradient;
+	.section_banner_text_wrap {
+		display: flex;
+		flex-direction: column;
+		.section_banner_heading {
+			@include font(36px, normal, bold, $color-main-one);
+			position: relative;
+			z-index: 5;
+			margin-bottom: 20px;
+			&:before {
+			content: '';
+		    display: inline-block;
+		    width: 83px;
+		    height: 50px;
+		    background-color: $bg-word;
+		    position: absolute;
+		    z-index: -1;
+		    bottom: 0;
+		    left: 143px;
+		}
+		}
+		.section_banner_text {
+			color: $color-main-one;
+		}	
+	}
+	.section_banner_button {
+		@include button;
+	}
+}
+
+.footer {
+	background-color: $color-main-four;
+	.footer-wrap {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: center;
+		@include container(1170px, auto, auto, 15px, 15px);
+		padding-bottom: 30px;
+		padding-top: 150px;
+		.footer-cr {
+			color: map-get($color-logo, light);
+		}
+	}
+}
+
+.footer_logo {
+	@extend .landing-logo;
+	p {
+		color: map-get($color-logo, light);
+	}
+}
+
+.footer_text {
+	@extend.section_card_text;
+	max-width: 320px;
+}

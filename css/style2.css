@@ -1,0 +1,247 @@
+* {
+  box-sizing: border-box;
+  margin: 0px; }
+
+body {
+  font-family: "Source Sans Pro", sans-serif;
+  background-color: #121a23; }
+
+.header {
+  position: relative;
+  height: 100vh;
+  background-image: url("../img/m-h-day.jpg");
+  display: block;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+  border-radius: 0 0 40% 0;
+  background-position-x: center;
+  background-position-y: center; }
+  .header .header-wrap {
+    max-width: 1170px;
+    margin-right: auto;
+    margin-left: auto;
+    padding-right: 15px;
+    padding-left: 15px;
+    display: flex;
+    flex-direction: column; }
+    .header .header-wrap > div:last-child {
+      display: flex;
+      align-items: center; }
+  .header .header_heading {
+    position: relative;
+    z-index: 5;
+    max-width: 500px;
+    font-family: "Source Sans Pro", sans-serif;
+    font-size: 62px;
+    font-style: normal;
+    font-weight: bold;
+    color: #fff;
+    padding-top: 60px; }
+    .header .header_heading:before {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      z-index: -1;
+      content: '';
+      display: inline-block;
+      width: 260px;
+      height: 52px;
+      background: #ff6319; }
+  .header .header_text {
+    max-width: 540px;
+    line-height: 1.7;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    font-size: 17px;
+    color: #fff; }
+  .header .header_button {
+    display: inline-block;
+    vertical-align: top;
+    height: 50px;
+    padding: 14px 40px;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: bold;
+    line-height: 1.66;
+    text-transform: uppercase;
+    letter-spacing: 0.07em;
+    color: #fff;
+    background-color: #ebe633;
+    border: 0px;
+    cursor: pointer; }
+  .header .login {
+    font-family: "Fresca", sans-serif;
+    font-size: 18px;
+    color: #fff;
+    margin-left: 150px; }
+
+.landing-logo, .footer_logo {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding-top: 20px;
+  font-family: "Hind", sans-serif; }
+  .landing-logo img, .footer_logo img {
+    padding-right: 10px; }
+  .landing-logo p, .footer_logo p {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #fff;
+    font-size: 24px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-transform: uppercase; }
+  .landing-logo span, .footer_logo span {
+    font-size: 15px;
+    text-transform: lowercase;
+    letter-spacing: normal; }
+
+.section_text {
+  max-width: 900px;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 15px;
+  padding-left: 15px;
+  font-size: 52px;
+  font-style: normal;
+  font-weight: bold;
+  color: #fff;
+  position: relative;
+  z-index: 5;
+  max-width: 565px;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  text-align: center; }
+  .section_text:before {
+    position: absolute;
+    z-index: -1;
+    bottom: 5px;
+    right: 32px;
+    content: '';
+    display: inline-block;
+    width: 241px;
+    height: 50px;
+    background-color: #ff6319; }
+
+.section_card_wrap {
+  max-width: 900px;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 15px;
+  padding-left: 15px; }
+  .section_card_wrap .section_card {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 30px;
+    padding: 15px;
+    background-color: #112231; }
+    .section_card_wrap .section_card .section_card_img {
+      width: 40%;
+      min-height: 300px; }
+    .section_card_wrap .section_card .section_card_right_container {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 40px;
+      width: 60%;
+      color: #fff; }
+      .section_card_wrap .section_card .section_card_right_container .section_card_heading {
+        font-size: 32px;
+        font-style: normal;
+        font-weight: bold;
+        color: #fff;
+        text-align: center; }
+      .section_card_wrap .section_card .section_card_right_container .section_link {
+        font-family: "Fresca", sans-serif;
+        font-size: 14px;
+        color: #ccc;
+        margin-left: 0px;
+        text-align: center; }
+
+.section_card_text, .footer_text {
+  font-size: 15px;
+  font-style: normal;
+  font-weight: normal;
+  color: #ccc;
+  line-height: 2; }
+
+.section_banner {
+  max-width: 1170px;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 80px;
+  padding-left: 80px;
+  position: relative;
+  top: 90px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 50px;
+  padding-top: 50px;
+  border-radius: 5px;
+  background-image: linear-gradient(to right, #ebe633, #ba263f); }
+  .section_banner .section_banner_text_wrap {
+    display: flex;
+    flex-direction: column; }
+    .section_banner .section_banner_text_wrap .section_banner_heading {
+      font-size: 36px;
+      font-style: normal;
+      font-weight: bold;
+      color: #fff;
+      position: relative;
+      z-index: 5;
+      margin-bottom: 20px; }
+      .section_banner .section_banner_text_wrap .section_banner_heading:before {
+        content: '';
+        display: inline-block;
+        width: 83px;
+        height: 50px;
+        background-color: #ff6319;
+        position: absolute;
+        z-index: -1;
+        bottom: 0;
+        left: 143px; }
+    .section_banner .section_banner_text_wrap .section_banner_text {
+      color: #fff; }
+  .section_banner .section_banner_button {
+    display: inline-block;
+    vertical-align: top;
+    height: 50px;
+    padding: 14px 40px;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: bold;
+    line-height: 1.66;
+    text-transform: uppercase;
+    letter-spacing: 0.07em;
+    color: #fff;
+    background-color: #ebe633;
+    border: 0px;
+    cursor: pointer; }
+
+.footer {
+  background-color: #112231; }
+  .footer .footer-wrap {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1170px;
+    margin-right: auto;
+    margin-left: auto;
+    padding-right: 15px;
+    padding-left: 15px;
+    padding-bottom: 30px;
+    padding-top: 150px; }
+    .footer .footer-wrap .footer-cr {
+      color: #ccc; }
+
+.footer_logo p {
+  color: #ccc; }
+
+.footer_text {
+  max-width: 320px; }
